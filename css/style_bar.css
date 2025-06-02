@@ -1,0 +1,135 @@
+
+
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: #1e1e1e;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Left side: App logo + name */
+  .left-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo {
+    height: 30px;
+    width: 30px;
+  }
+  .app-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Right side: User + logout */
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  /* .user-menu {
+    position: relative;
+    display: inline-block;
+  }
+  .user-label {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  /* .user-dropdown {
+    display: none; 
+    position: absolute; 
+    top: 25px; 
+    right: 0;
+    background: white; 
+    color: black; 
+    border: 1px solid #ccc; 
+    min-width: 150px;
+  } 
+  .user-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+    min-width: 160px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  .user-dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.3s;
+  }
+  .user-dropdown a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .user-menu:hover .user-dropdown {
+    display: block;
+  } */
+
+  .user-menu {
+    position: relative;
+    display: inline-block;
+    z-index: 1000;
+  }
+  
+  .user-label {
+    cursor: pointer;
+    padding: 10px 15px;
+    display: inline-block;
+    color: white;
+  }
+  
+  .user-dropdown {
+    position: absolute;
+    top: 100%; /* right under the label */
+    left: 0;
+    display: none;
+    background: #fff;
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: opacity 0.2s ease;
+  }
+  
+  .user-dropdown a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  
+  .user-dropdown a:hover {
+    background: #f4f4f4;
+  }
+  
+  .user-menu:hover .user-dropdown {
+    display: block;
+  }
+  
+  .logout-btn {
+    background: #e74c3c;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .logout-btn:hover {
+    background: #c0392b;
+  }
+  

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoodReads - Project Flow</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdf6f0;
+      color: #333;
+      padding: 2rem;
+    }
+    .flow-box {
+      border: 2px solid #d4b197;
+      border-radius: 12px;
+      background: #fff;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .arrow {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      color: #a67c52;
+    }
+    .title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #5e3d2c;
+      margin-bottom: 0.5rem;
+    }
+    code {
+      background: #f4ece7;
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flow-box">
+    <div class="title">1. index.php (Homepage)</div>
+    User enters mood like <code>I feel nostalgic and hopeful</code> in a textarea. On button click, JavaScript saves it in <code>sessionStorage</code> and redirects to <code>results.php</code>.
+  </div>
+
+  <div class="arrow">↓</div>
+
+  <div class="flow-box">
+    <div class="title">2. results.php + script.js</div>
+    JavaScript fetches the mood from sessionStorage, sends it via <code>fetch()</code> POST to <code>recommend.php</code>.
+  </div>
+
+  <div class="arrow">↓</div>
+
+  <div class="flow-box">
+    <div class="title">3. recommend.php (PHP Backend)</div>
+    PHP decodes mood input → uses <code>strpos()</code> to extract keywords → maps them to vibe_tags.
+  </div>
+
+  <div class="arrow">↓</div>
+
+  <div class="flow-box">
+    <div class="title">4. SQL Query (MySQL)</div>
+    Query joins <code>books</code>, <code>book_vibe_tags</code>, and <code>vibe_tags</code> to find matching books.
+    <br />Books are returned randomly using <code>ORDER BY RAND()</code>.
+  </div>
+
+  <div class="arrow">↓</div>
+
+  <div class="flow-box">
+    <div class="title">5. JavaScript renders books</div>
+    Loops over returned <code>books[]</code>, builds HTML cards with book image, title, author, and heart icon ❤️.
+  </div>
+
+  <div class="arrow">↓</div>
+
+  <div class="flow-box">
+    <div class="title">6. Favorite Button (Heart)</div>
+    On heart click → <code>fetch()</code> POST to <code>save_fav.php</code>. PHP checks session, inserts into <code>favorites</code>.
+  </div>
+
+  <div class="arrow">↓</div>
+
+  <div class="flow-box">
+    <div class="title">7. Book Detail Popup</div>
+    On image click → calls <code>book_detail.php?book_id=...</code>. Displays full description and vibes in a modal.
+  </div>
+
+  <div class="arrow">↓</div>
+
+  <div class="flow-box">
+    <div class="title">8. Mood Logging</div>
+    Every mood is logged into <code>mood_logs</code> table with timestamp and user_id.
+  </div>
+
+</body>
+</html>

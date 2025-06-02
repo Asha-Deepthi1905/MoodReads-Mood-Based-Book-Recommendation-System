@@ -48,12 +48,12 @@ HOW IT WORKS:-
 
 DATABASE SCHHEMA(TABLES):-
 
-users
-books
-vibe_tags
-book_vibe_tags (many-to-many)
-mood_logs
-favorites
+1. users
+2. books
+3. vibe_tags
+4. book_vibe_tags (many-to-many)
+5. mood_logs
+6. favorites
 
 
 FUTURE ENHANCEMENTS:- 

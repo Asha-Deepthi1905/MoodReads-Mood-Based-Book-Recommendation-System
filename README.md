@@ -1,10 +1,10 @@
-#MoodReads — A Mood-Based Book Recommendation Engine
+# MoodReads — A Mood-Based Book Recommendation Engine
 
 **MoodReads is a personalized web-based book recommendation system that matches your mood or vibe to books that carry a similar emotional tone. 
 Instead of choosing from fixed genres, users simply describe how they feel — and MoodReads does the rest.**
 
 
-##FEATURES:-
+## FEATURES:-
 
 1. Mood-to-Vibe Mapping
 Type “I feel nostalgic” or “Need something magical” — we map it to tags like nostalgic, magical, uplifting, etc.
@@ -28,7 +28,7 @@ Click on any book to view full summary, year, and associated vibes in a modal.
 Styled with CSS, playful fonts and cozy colors
 
 
-###TECH USED:-
+### TECH USED:-
 
  Frontend :- HTML, CSS, JavaScript     
  Backend  :- PHP (with PDO)            
@@ -36,7 +36,7 @@ Styled with CSS, playful fonts and cozy colors
  Hosting  :-  XAMPP / Localhost         
 
 
-###HOW IT WORKS:-
+### HOW IT WORKS:-
 
 1. User inputs a free-text mood (e.g., “I feel anxious and restless.”)
 2. JavaScript sends this mood via fetch() to recommend.php
@@ -46,7 +46,7 @@ Styled with CSS, playful fonts and cozy colors
 6. User clicks ❤️ → triggers save_favorite.php → adds book to favorites table
 
 
-**DATABASE SCHHEMA(TABLES):-**
+### DATABASE SCHHEMA(TABLES):-
 
 1. users
 2. books
@@ -56,7 +56,7 @@ Styled with CSS, playful fonts and cozy colors
 6. favorites
 
 
-**FUTURE ENHANCEMENTS:-**
+### FUTURE ENHANCEMENTS:-
 
 1.Genre selection + mood combo search
 2.Mood prompt buttons
